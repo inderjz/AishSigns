@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -43,14 +43,36 @@
     <section class="container">
       <div class="row">
         <div class="about-col-1">
-           <img src="assests/challenge 2 pic 2 .jpeg">
+            <video autoplay controls>
+                <source src="assests/video7.mp4" type="video/mp4">
+            </video>
         </div>
+        
         <div class="about-col-2">
           <h1 class="sub-title">About Us</h1>
           <h5>Signs, Graphics <span>& Much More</span></h5>
-          <p>Hello and welcome to our shop. We were founded in 2020. We provide a wide range of services and excellent quality at very reasonable prices.</p>
+          <p>Hello and welcome to our shop. We were founded in 2020. We provide a wide range of services and excellent quality at very reasonable prices. Highest quality truck and trailer signs in Fresno county are provided by us. Designed, Produced and Installed by Professionals, and all of that with best price and quality!</p>
 
-        
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('hours')">Hours</p>
+            <p class="tab-links" onclick="opentab('address')">Address</p>
+          </div>
+          <div class="tab-contents active-tab" id="hours">
+            <ul>
+                <li><span>Monday</span><br>8:30AM-4PM</li>
+                <li><span>Tuesday</span><br>8:30AM-4PM</li>
+                <li><span>Wednesday</span><br>8:30AM-4PM</li>
+                <li><span>Thursday</span><br>8:30AM-4PM</li>
+                <li><span>Friday</span><br>8:30AM-4PM</li>
+                <li><span>Saturday</span><br>9AM-12PM</li>
+                <li><span>Sunday</span><br>CLOSED!</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="address">
+            <ul>
+                <li><span>4339 N Golden State Blvd Suite 103,</span><br>Fresno, CA 93722</li>
+            </ul>
+          </div>
          </div>
         </div>
       </div>     
@@ -60,8 +82,8 @@
             <h1 class="sub-title">Our <span>Online Shop</span></h1>
             <div class="services-list">
                <div>
-                  <i class="fa-solid fa-code"></i>
-                  <h2>Car Decals & Window Tint</h2>
+                <i class="fa-solid fa-shirt"></i>
+                  <h2>Custom T-Shirts</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, 
                    tincidunt sit amet sapien quis.</p>
                </div> 
@@ -142,10 +164,25 @@
          </div>
      </div>
      <div class="copyright">
-        <p>© 2022 Aish Signs and Graphics, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved Inderjz.</p>
+        <p>© 2022 Aish Signs and Graphics, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved. inderjz</p>
      </div>
 
  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
 
     var sidemenu = document.getElementById("sidemenu");
 
